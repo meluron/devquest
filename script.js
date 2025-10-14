@@ -295,7 +295,7 @@ function handleCategoryFilterToggle(e) {
 
 function showCategoryFilterDropdown(triggerElement = null) {
     const categories = [...new Set(tutorials.map(t => t.category))].sort();
-    let dropdownContent = `<div class="filter-option ${currentCategoryFilter === '' ? 'active' : ''}" data-category="" role="option">All Categories</div>`;
+    let dropdownContent = `<div class="filter-option ${currentCategoryFilter === '' ? 'active' : ''}" data-category="" role="option">All Projects</div>`;
     
     categories.forEach(cat => {
         dropdownContent += `<div class="filter-option ${currentCategoryFilter === cat ? 'active' : ''}" data-category="${cat}" role="option">${cat}</div>`;
