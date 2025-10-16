@@ -9744,37 +9744,37 @@ a.anchor-link {
       downloadBtn.download = ipynbFilename;
 
       // Create the ChatGPT button
-        var aiBtn = document.createElement("button");
-        aiBtn.className = "ai-btn";
-        aiBtn.innerHTML = createAIIcon();
-        aiBtn.title = "Ask ChatGPT about this notebook";
-      
-        // Handle click event
-        aiBtn.addEventListener("click", async function() {
-          // 1. Grab visible text
-          var content = document.body.innerText;
-      
-          // 2. Truncate to safe clipboard size
-          var truncated = content.slice(0, 40000);
-      
-          // 3. Build the prompt
-          var prompt = `Here's my Jupyter notebook content:
+      var aiBtn = document.createElement("button");
+      aiBtn.className = "ai-btn";
+      aiBtn.innerHTML = createAIIcon();
+      aiBtn.title = "Ask ChatGPT about this notebook";
+    
+      // Handle click event
+      aiBtn.addEventListener("click", async function() {
+        // 1. Grab visible text
+        var content = document.body.innerText;
+    
+        // 2. Truncate to safe clipboard size
+        var truncated = content.slice(0, 40000);
+    
+        // 3. Build the prompt
+        var prompt = `Here's my Jupyter notebook content:
       
       ${content}
       
       I'll ask questions about it next.`;
       
-          try {
-            // 4. Copy to clipboard
-            await navigator.clipboard.writeText(prompt);
-            alert("✅ Notebook content copied to clipboard! It will open ChatGPT next.");
-      
-            // 5. Open ChatGPT in a new tab
-            window.open("https://chat.openai.com/", "_blank");
-          } catch (err) {
-            alert("⚠️ Failed to copy notebook text: " + err);
-          }
-        });
+      try {
+        // 4. Copy to clipboard
+        await navigator.clipboard.writeText(prompt);
+        alert("✅ Notebook content copied to clipboard! It will open ChatGPT next.");
+  
+        // 5. Open ChatGPT in a new tab
+        window.open("https://chat.openai.com/", "_blank");
+      } catch (err) {
+        alert("⚠️ Failed to copy notebook text: " + err);
+      }
+      });
 
       var videoToggleBtn = document.createElement("button");
       videoToggleBtn.className = "video-toggle-btn";
