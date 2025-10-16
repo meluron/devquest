@@ -7602,12 +7602,12 @@ a.anchor-link {
 <div class="hc-calendar">
 <div class="hc-header">Last modified</div>
 <div class="hc-month">Oct, 2025</div>
-<div class="hc-day">14</div>
-<div class="hc-time">03:22:10 PM</div>
+<div class="hc-day">15</div>
+<div class="hc-time">04:51:41 PM</div>
 </div>
 <!-- Header text -->
 <div style="flex: 1;">
-<div class="hc-title">Contrastive Learning of Musical Representations <a class="hc-link" href="https://arxiv.org/pdf/2103.09410" target="_blank">🔗</a></div>
+<div class="hc-title">HMM-Based Multipitch Tracking for Noisy and Reverberant Speech <a class="hc-link" href="https://pnlwang.github.io/papers/Jin-Wang.taslp11.pdf" target="_blank">🔗</a></div>
 <p class="hc-keywords keywords">;</p>
 </div>
 </div>
@@ -7637,17 +7637,6 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=35039890-a98d-471b-98b1-dc5abbdf0f93">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="What-is-Transformer?">What is Transformer?<a class="anchor-link" href="#What-is-Transformer?">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7738,9 +7727,9 @@ a.anchor-link {
       box-shadow: 0 2px 12px rgba(0,0,0,0.2) !important;
       transition: all 0.3s ease !important;
       height: auto !important;
-      width: 284px !important;
-      max-width: 284px !important;
-      min-width: 284px !important;
+      width: 324px !important;
+      max-width: 324px !important;
+      min-width: 324px !important;
       box-sizing: border-box !important;
       overflow: hidden !important;
     }
@@ -7762,9 +7751,9 @@ a.anchor-link {
     }
 
     .toc-content {
-      width: 280px !important;
-      max-width: 280px !important;
-      min-width: 280px !important;
+      width: 320px !important;
+      max-width: 320px !important;
+      min-width: 320px !important;
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -7778,9 +7767,9 @@ a.anchor-link {
 
     /* ======= VIDEO CONTENT CONTAINER ======= */
     .video-content {
-      width: 280px !important;
-      max-width: 280px !important;
-      min-width: 280px !important;
+      width: 320px !important;
+      max-width: 320px !important;
+      min-width: 320px !important;
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -7919,7 +7908,8 @@ a.anchor-link {
     .toc-toggle-btn,
     .video-toggle-btn,
     .report-issue-btn,
-    .download-btn {
+    .download-btn,
+    .ai-btn {
         all: unset;
         width: 40px !important;
         height: 40px !important;
@@ -7962,7 +7952,8 @@ a.anchor-link {
     .toc-toggle-btn svg,
     .video-toggle-btn svg,
     .report-issue-btn svg,
-    .download-btn svg {
+    .download-btn svg, 
+    .ai-btn svg {
         width: 20px !important;
         height: 20px !important;
         stroke: currentColor !important;
@@ -7979,7 +7970,8 @@ a.anchor-link {
     .toc-toggle-btn:hover,
     .video-toggle-btn:hover,
     .report-issue-btn:hover,
-    .download-btn:hover {
+    .download-btn:hover,
+    .ai-btn:hover {
         background: transparent !important;
         transform: none !important;
         scale: none !important;
@@ -7991,7 +7983,8 @@ a.anchor-link {
     .toc-toggle-btn:hover svg,
     .video-toggle-btn:hover svg,
     .report-issue-btn:hover svg,
-    .download-btn:hover svg {
+    .download-btn:hover svg,
+    .ai-btn:hover svg {
         stroke: #fd8a09 !important;
         color: #fd8a09 !important;
         transform: none !important;
@@ -8138,6 +8131,40 @@ a.anchor-link {
         text-decoration: none !important;
     }
 
+    /* ======= AI BUTTON SPECIFIC STYLES ======= */
+    .ai-btn {
+      font-weight: 700 !important;
+      vertical-align: top !important;
+      color: var(--text-color) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    
+    .ai-btn svg text {
+      fill: currentColor !important;
+    }
+    
+    .ai-btn:hover svg text {
+      fill: #fd8a09 !important;
+    }
+    
+    body.light-mode .ai-btn svg text {
+      fill: #333333 !important;
+    }
+    
+    body.light-mode .ai-btn:hover svg text {
+      fill: #fd8a09 !important;
+    }
+    
+    .ai-btn:hover svg text {
+      fill: var(--text-color) !important;
+    }
+    
+    body.light-mode .ai-btn:hover svg text {
+      fill: #333333 !important;
+    }
+
     /* Light mode button container */
     body.light-mode .button-container {
         background: rgba(255, 255, 255, 0.95) !important;
@@ -8167,7 +8194,8 @@ a.anchor-link {
     body.light-mode .toc-toggle-btn,
     body.light-mode .video-toggle-btn,
     body.light-mode .report-issue-btn,
-    body.light-mode .download-btn {
+    body.light-mode .download-btn,
+    body.light-mode .ai-btn {
         color: #333333 !important;
     }
     
@@ -8177,7 +8205,8 @@ a.anchor-link {
     body.light-mode .toc-toggle-btn svg,
     body.light-mode .video-toggle-btn svg,
     body.light-mode .report-issue-btn svg,
-    body.light-mode .download-btn svg {
+    body.light-mode .download-btn svg,
+    body.light-mode .ai-btn svg {
         stroke: #333333 !important;
         color: #333333 !important;
     }
@@ -8218,7 +8247,8 @@ a.anchor-link {
     body.light-mode .toc-toggle-btn:hover,
     body.light-mode .video-toggle-btn:hover,
     body.light-mode .report-issue-btn:hover,
-    body.light-mode .download-btn:hover {
+    body.light-mode .download-btn:hover,
+    body.light-mode .ai-btn:hover {
         background: transparent !important;
     }
 
@@ -8228,7 +8258,8 @@ a.anchor-link {
     body.light-mode .toc-toggle-btn:hover svg,
     body.light-mode .video-toggle-btn:hover svg,
     body.light-mode .report-issue-btn:hover svg,
-    body.light-mode .download-btn:hover svg {
+    body.light-mode .download-btn:hover svg,
+    body.light-mode .ai-btn:hover svg {
         stroke: #fd8a09 !important;
         color: #fd8a09 !important;
     }
@@ -8241,7 +8272,8 @@ a.anchor-link {
         .toc-toggle-btn:hover,
         .video-toggle-btn:hover,
         .report-issue-btn:hover,
-        .download-btn:hover {
+        .download-btn:hover,
+        .ai-btn:hover {
             background: transparent !important;
         }
 
@@ -8251,7 +8283,8 @@ a.anchor-link {
         .toc-toggle-btn:hover svg,
         .video-toggle-btn:hover svg,
         .report-issue-btn:hover svg,
-        .download-btn:hover svg {
+        .download-btn:hover svg,
+        .ai-btn:hover svg {
             stroke: var(--text-color) !important;
             color: var(--text-color) !important;
         }
@@ -8287,7 +8320,8 @@ a.anchor-link {
         body.light-mode .toc-toggle-btn:hover svg,
         body.light-mode .video-toggle-btn:hover svg,
         body.light-mode .report-issue-btn:hover svg,
-        body.light-mode .download-btn:hover svg {
+        body.light-mode .download-btn:hover svg,
+        body.light-mode .ai-btn:hover svg {
             stroke: #333333 !important;
             color: #333333 !important;
         }
@@ -8392,7 +8426,8 @@ a.anchor-link {
         .toc-toggle-btn:focus-visible,
         .video-toggle-btn:focus-visible,
         .report-issue-btn:focus-visible,
-        .download-btn:focus-visible {
+        .download-btn:focus-visible,
+        .ai-btn:focus-visible {
             outline: 2px solid #fd8a09;
             outline-offset: 2px;
             border-radius: 8px;
@@ -8404,7 +8439,8 @@ a.anchor-link {
         .toc-toggle-btn:focus,
         .video-toggle-btn:focus,
         .report-issue-btn:focus,
-        .download-btn:focus {
+        .download-btn:focus,
+        .ai-btn:focus {
             outline: none;
         }
     }
@@ -9374,6 +9410,24 @@ a.anchor-link {
         </svg>`;
       }
 
+      function createAIIcon() {
+        return `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Robot head -->
+            <rect x="4" y="4" width="16" height="16" rx="3" ry="3"/>
+            <!-- Eyes -->
+            <circle cx="9" cy="10" r="1.5" fill="currentColor"/>
+            <circle cx="15" cy="10" r="1.5" fill="currentColor"/>
+            <!-- Mouth -->
+            <path d="M9 15c1.5 1.5 4.5 1.5 6 0"/>
+            <!-- Antenna -->
+            <line x1="12" y1="2" x2="12" y2="4"/>
+            <circle cx="12" cy="2" r="1" fill="currentColor"/>
+          </svg>
+        `;
+      }
+
+
       var buttonContainer = document.createElement("div");
       buttonContainer.className = "button-container";
 
@@ -9653,7 +9707,7 @@ a.anchor-link {
       var reportIssueBtn = document.createElement("a");
       reportIssueBtn.className = "report-issue-btn";
       reportIssueBtn.innerHTML = createQuestionIcon();
-      reportIssueBtn.title = "Have questions about this notebook?";
+      reportIssueBtn.title = "Ask us about this notebook?";
       reportIssueBtn.target = "_blank";
       reportIssueBtn.rel = "noopener noreferrer";
       reportIssueBtn.style.color = "inherit";
@@ -9661,7 +9715,7 @@ a.anchor-link {
       var notebookName = getNotebookName();
       var issueTitle = "[Tutorial Content Issue] " + notebookName;
       var issueBody = encodeURIComponent("[" + notebookName + "](" + window.location.href + ")\n\nMention your queries below: \n");
-      reportIssueBtn.href = "https://github.com/meluron-codecafe/DevQuest/issues/new?assignees=ankit0anand0&labels=tutorials&projects=&template=&title=" + encodeURIComponent(issueTitle) + "&body=" + issueBody;
+      reportIssueBtn.href = "https://github.com/meluron/devquest/issues/new?assignees=ankit0anand0&labels=tutorials&projects=&template=&title=" + encodeURIComponent(issueTitle) + "&body=" + issueBody;
 
       var downloadBtn = document.createElement("a");
       downloadBtn.className = "download-btn";
@@ -9674,6 +9728,39 @@ a.anchor-link {
       var ipynbFilename = getIpynbFilename();
       downloadBtn.href = "../notebooks/" + ipynbFilename;
       downloadBtn.download = ipynbFilename;
+
+      // Create the ChatGPT button
+        var aiBtn = document.createElement("button");
+        aiBtn.className = "ai-btn";
+        aiBtn.innerHTML = createAIIcon();
+        aiBtn.title = "Ask ChatGPT about this notebook";
+      
+        // Handle click event
+        aiBtn.addEventListener("click", async function() {
+          // 1. Grab visible text
+          var content = document.body.innerText;
+      
+          // 2. Truncate to safe clipboard size
+          var truncated = content.slice(0, 40000);
+      
+          // 3. Build the prompt
+          var prompt = `Here's my Jupyter notebook content:
+      
+      ${content}
+      
+      I'll ask questions about it next.`;
+      
+          try {
+            // 4. Copy to clipboard
+            await navigator.clipboard.writeText(prompt);
+            alert("✅ Notebook content copied to clipboard! It will open ChatGPT next.");
+      
+            // 5. Open ChatGPT in a new tab
+            window.open("https://chat.openai.com/", "_blank");
+          } catch (err) {
+            alert("⚠️ Failed to copy notebook text: " + err);
+          }
+        });
 
       var videoToggleBtn = document.createElement("button");
       videoToggleBtn.className = "video-toggle-btn";
@@ -9814,6 +9901,7 @@ a.anchor-link {
       buttonRow.appendChild(themeToggleBtn);
       buttonRow.appendChild(reportIssueBtn);
       buttonRow.appendChild(downloadBtn);
+      buttonRow.appendChild(aiBtn);
       buttonRow.appendChild(videoToggleBtn);
       buttonRow.appendChild(tocToggleBtn);
       
