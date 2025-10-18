@@ -1,12 +1,28 @@
 [project]
-name = "DevQuest"
+name = "devquest"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "Ankit Anand", email = "ankit0.anand0@gmail.com"},
 ]
-dependencies = ["modusa>=0.3.42", "jupyter>=1.1.1", "ipykernel>=6.30.1", "praat-parselmouth>=0.4.6", "sounddevice>=0.5.2", "pyworld>=0.3.5", "pyreaper>=0.0.11", "matplotlib-venn>=1.1.2", "pandas>=2.3.2", "pyloudnorm>=0.1.1", "stockwell>=1.2"]
-requires-python = "==3.10.*"
+dependencies = [
+    "jupyter>=1.1.1",
+    "ipykernel>=6.30.1",
+    "praat-parselmouth>=0.4.6",
+    "sounddevice>=0.5.2",
+    "pyworld>=0.3.5",
+    "pyreaper>=0.0.11",
+    "matplotlib-venn>=1.1.2",
+    "pandas>=2.3.2",
+    "pyloudnorm>=0.1.1",
+    "stockwell>=1.2",
+    "torch>=2.9.0",
+    "torchvision>=0.24.0",
+    "datasets>=4.2.0",
+    "transformers>=4.57.1",
+    "modusa>=0.4.13",
+]
+requires-python = "==3.13.*"
 readme = "README.md"
 license = {text = "MIT"}
 

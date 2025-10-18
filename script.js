@@ -295,7 +295,11 @@ function handleCategoryFilterToggle(e) {
 
 function showCategoryFilterDropdown(triggerElement = null) {
     const categories = [...new Set(tutorials.map(t => t.category))].sort();
-    let dropdownContent = `<div class="filter-option ${currentCategoryFilter === '' ? 'active' : ''}" data-category="" role="option">All Projects</div>`;
+    let dropdownContent = `
+        <div class="filter-option ${currentCategoryFilter === '' ? 'active' : ''}" data-category="" role="option">All Projects</div>
+        <div class="filter-option ${currentCategoryFilter === '[Paper]' ? 'active' : ''}" data-category="[Paper]" role="option">📄 Papers</div>
+        <div class="filter-option ${currentCategoryFilter === '[Topic]' ? 'active' : ''}" data-category="[Topic]" role="option">💡 Topics</div>
+    `;
     
     categories.forEach(cat => {
         dropdownContent += `<div class="filter-option ${currentCategoryFilter === cat ? 'active' : ''}" data-category="${cat}" role="option">${cat}</div>`;
@@ -303,13 +307,11 @@ function showCategoryFilterDropdown(triggerElement = null) {
     
     categoryFilterDropdown.innerHTML = dropdownContent;
     
-    // Use the trigger element or fall back to the category filter icon
     const referenceElement = triggerElement || categoryFilterIcon;
     const rect = referenceElement.getBoundingClientRect();
     const container = document.querySelector('.container');
     const containerRect = container.getBoundingClientRect();
     
-    // Position dropdown
     categoryFilterDropdown.style.left = (rect.left - containerRect.left) + "px";
     categoryFilterDropdown.style.top = (rect.bottom - containerRect.top + 5) + "px";
     categoryFilterDropdown.style.transform = "none";
@@ -611,10 +613,26 @@ function renderTable() {
     
     tableBody.innerHTML = '';
     
-    const filteredTutorials = tutorials.filter(t =>
-        (!currentCategoryFilter || t.category.toLowerCase() === currentCategoryFilter.toLowerCase()) &&
-        (!searchQuery || (t.topic + ' ' + t.keywords).toLowerCase().includes(searchQuery))
-    );
+    const filteredTutorials = tutorials.filter(t => {
+        const category = t.category.toLowerCase();
+        const topic = t.topic.toLowerCase();
+        const keywords = t.keywords.toLowerCase();
+        const filter = currentCategoryFilter.toLowerCase();
+        
+        const categoryMatch =
+        !filter ||
+        category === filter ||
+        (filter === '[paper]' && category.startsWith('[paper]')) ||
+        (filter === '[topic]' && category.startsWith('[topic]'));
+        
+        const searchMatch =
+        !searchQuery ||
+        category.includes(searchQuery) ||
+        topic.includes(searchQuery) ||
+        keywords.includes(searchQuery);
+        
+        return categoryMatch && searchMatch;
+    });
     
     if (filteredTutorials.length === 0) {
         tableWrapper.style.display = 'none';
@@ -625,14 +643,23 @@ function renderTable() {
         
         filteredTutorials.forEach(t => {
             const tr = document.createElement('tr');
-            const color = categoryColorMap[t.category] || "#ddd";
+            const category = t.category || '';
+            let color = categoryColorMap[category] || "#ddd";
+            
+            // Special color overrides for [Paper] and [Topic]
+            if (category.startsWith('[Paper]')) {
+                color = currentTheme === 'light' ? '#dc6803' : '#fd8a09'; // orange
+            } else if (category.startsWith('[Topic]')) {
+                color = currentTheme === 'light' ? '#15803d' : '#4ade80'; // green
+            }
+            
             tr.innerHTML = `
-            <td class="category" style="color: ${color};" data-label="Category">
-                ${t.category}
-            </td>
-            <td data-label="Topic"><a href="htmls/${t.filename}">${t.topic}</a></td>
-            <td data-label="Keywords">${t.keywords || '-'}</td>
-        `;
+        <td class="category" style="color: ${color};" data-label="Category">
+            ${category}
+        </td>
+        <td data-label="Topic"><a href="htmls/${t.filename}">${t.topic}</a></td>
+        <td data-label="Keywords">${t.keywords || '-'}</td>
+    `;
             tableBody.appendChild(tr);
         });
     }
