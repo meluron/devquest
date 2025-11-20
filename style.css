@@ -139,13 +139,4 @@ a:hover {
     font-weight: 600;
     color: #333;
   }
-
-  .footer {
-    flex-direction: column;
-    gap: 15px !important;
-  }
-
-  .footer > div:nth-child(2) {
-    display: none !important;
-  }
 }
