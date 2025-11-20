@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://raw.githubusercontent.com/meluron/assets/refs/heads/main/logos/devquest/icon.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/meluron/assets/refs/heads/main/logos/devquest/icon.png"
+      type="image/png"
+    />
     <title>devquest</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
     <div class="container">
-        <input type="text" class="search-box" id="searchInput" placeholder="Search by category, topic, or keywords...">
-        <div class="results-count" id="resultsCount"></div>
-        <table id="contentTable">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Topic</th>
-                    <th>Description</th>
-                    <th>Keywords</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
-        <div class="no-results" id="noResults">No results found</div>
-        
-        <div class="footer" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px;">
-            <!-- Left image -->
-            <img src="https://raw.githubusercontent.com/meluron/assets/refs/heads/main/logos/devquest/icon.png" alt="devquest logo" style="height: 40px; display: block;">
-            
-            <!-- Vertical line -->
-            <div style="width: 1px; height: 30px; background-color: #ccc; margin: 0 10px;"></div>
-            
-            <!-- Existing content -->
-            <div style="display: flex; align-items: center; gap: 0; color: #666;">
-                An initiative by 
-                <a href="https://meluron.github.io/" target="_blank" style="display: inline-flex; align-items: center; margin-left: -9px; margin-right: -14px;">
-                    <img src="https://raw.githubusercontent.com/meluron/assets/refs/heads/main/logos/meluron/icon.png" alt="meluron logo" style="height: 50px; display: block;">
-                </a>
-                <b>eluron.</b>
-            </div>
+      <input
+        type="text"
+        class="search-box"
+        id="searchInput"
+        placeholder="Search by category, topic, or keywords..."
+      />
+      <div class="results-count" id="resultsCount"></div>
+      <table id="contentTable">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Topic</th>
+            <th>Description</th>
+            <th>Keywords</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div class="no-results" id="noResults">No results found</div>
+
+      <div
+        class="footer"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 30px;
+        "
+      >
+        <!-- Left image -->
+        <img
+          src="https://raw.githubusercontent.com/meluron/assets/refs/heads/main/logos/devquest/icon.png"
+          alt="devquest logo"
+          style="height: 40px; display: block"
+        />
+
+        <!-- Vertical line -->
+        <div
+          style="
+            width: 1px;
+            height: 30px;
+            background-color: #ccc;
+            margin: 0 10px;
+          "
+        ></div>
+
+        <!-- Existing content -->
+        <div style="display: flex; align-items: center; gap: 0; color: #666">
+          A
+          <a
+            href="https://meluron.github.io/"
+            target="_blank"
+            style="
+              display: inline-flex;
+              align-items: center;
+              margin-left: -9px;
+              margin-right: -14px;
+            "
+          >
+            <img
+              src="https://raw.githubusercontent.com/meluron/assets/refs/heads/main/logo/meluron/meluron-logo-nobg-nocircle-wtext.png"
+              alt="meluron logo"
+              style="height: 70px; display: block"
+            />
+          </a>
+          <!-- <b>eluron.</b> -->
+          initiative.
         </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:e16c6c84b77ee5c3f7d41eb9ff4e33f3c7b845b2ab181b78832977d7f0edb8cb"
+content_hash = "sha256:2258c95aa8eaced1ceee1e3eb80d12adc0afc425516dc334cb00f0f41cac1d43"
 
 [[metadata.targets]]
 requires_python = "==3.13.*"
@@ -1770,7 +1770,7 @@ files = [
 
 [[package]]
 name = "modusa"
-version = "1.0.0a1"
+version = "1.1.1a1"
 requires_python = ">=3.11"
 summary = "A modular signal analysis python library."
 groups = ["default"]
@@ -1786,8 +1786,8 @@ dependencies = [
     "yt-dlp==2025.10.22",
 ]
 files = [
-    {file = "modusa-1.0.0a1-py3-none-any.whl", hash = "sha256:8de290c104122e71a7daf22b281718f6782fcbcd148babdb45eac81ba5058387"},
-    {file = "modusa-1.0.0a1.tar.gz", hash = "sha256:16fc62d6f3971a6fb5cabe234468e321275214ab0de2ee465ca4559d8ed3a509"},
+    {file = "modusa-1.1.1a1-py3-none-any.whl", hash = "sha256:1bdf8f8e414a55caffaf5e4e272ac9eb056e91d47450dcaa57e167cbe530274f"},
+    {file = "modusa-1.1.1a1.tar.gz", hash = "sha256:13602495dd13100eb2422b88087b4726ee55f565dec8103f8d2098bfff6c0e8c"},
 ]
 
 [[package]]
