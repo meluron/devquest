@@ -20,7 +20,7 @@ dependencies = [
     "torchvision>=0.24.0",
     "datasets>=4.2.0",
     "transformers>=4.57.1",
-    "modusa==1.1.1a1",
+    "modusa==1.2.1a1",
     "librosa>=0.11.0",
     "graphviz>=0.21",
     "huggingface-hub[cli]>=0.35.3",
